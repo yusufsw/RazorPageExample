@@ -1,21 +1,23 @@
 @page 
 @using Microsoft.AspNetCore.Mvc.RazorPages
+@using RazorPageExample.Repository
 @model IndexModel
 @{
     ViewData["Title"] = "Employees page";
 }
 
 <h1>Employees</h1>
-<p>@Model.Message</p>
 
 @functions 
 {
     public class IndexModel : PageModel
-    {
-        public string Message { get; set; } = string.Empty;
+    { 
+        IndexModel(IEmployeeRepository _repository)
+        {
+
+        }
         public void OnGet()
         {
-            Message = "Merhaba Asp.NET Razor";
         }
     }
 }

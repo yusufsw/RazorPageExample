@@ -1,6 +1,6 @@
 using RazorPageExample.Models;
 
-namespace RazorPageExample.Reposiotry;
+namespace RazorPageExample.Repository;
 
 public class MockEmployeeRepository : IEmployeeRepository
 {
