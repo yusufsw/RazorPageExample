@@ -6,5 +6,5 @@ public class Employee
     public string Name { get; set; } = String.Empty;
     public string Email { get; set; } = String.Empty;
     public string Photo { get; set; } = String.Empty;
-    public string Deparment { get; set; } = String.Empty;
+    public string Department { get; set; } = String.Empty;
 }

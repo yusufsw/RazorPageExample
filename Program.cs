@@ -1,4 +1,4 @@
-using RazorPageExample.Reposiotry;
+using RazorPageExample.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
