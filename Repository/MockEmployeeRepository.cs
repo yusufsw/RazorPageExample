@@ -13,12 +13,18 @@ public class MockEmployeeRepository : IEmployeeRepository
           new Employee {Id=2, Name="Efe", Email="info@Efe.com", Photo = "2.jpeg", Department="Health" },  
           new Employee {Id=3, Name="Eyup", Email="info@Eyup.com", Photo = "3.jpeg", Department="Basketball" },  
           new Employee {Id=4, Name="Halil", Email="info@Halil.com", Photo = "4.jpeg", Department="Education" },  
-          //new Employee {Id=5, Name="Bahriye", Email="info@Bahriye.com", Photo = "5.jpeg", Department="Chemistry" }
+          new Employee {Id=5, Name="Bahriye", Email="info@Bahriye.com", Photo = "5.jpeg", Department="Chemistry" },
+          new Employee {Id=6, Name="Bahriye", Email="info@Bahriye.com", Photo = "5.jpeg", Department="Chemistry" }
         };
     }
 
     public IEnumerable<Employee> GetAll()
     {
         return _employeeList;
+    }
+
+    public Employee GetById(int id)
+    {
+        return _employeeList.FirstOrDefault(i=>i.Id == id);
     }
 }
