@@ -18,6 +18,11 @@ public class MockEmployeeRepository : IEmployeeRepository
         };
     }
 
+    public Employee Create(Employee entity)//it will complete
+    {
+        throw new NotImplementedException();
+    }
+
     public IEnumerable<Employee> GetAll()
     {
         return _employeeList;

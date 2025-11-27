@@ -8,4 +8,6 @@ public interface IEmployeeRepository
     Employee GetById(int id);
 
     Employee Update(Employee entity);
+
+    Employee Create(Employee entity);
 }
