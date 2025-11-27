@@ -9,5 +9,6 @@ public interface IEmployeeRepository
 
     Employee Update(Employee entity);
 
-    Employee Create(Employee entity);
+    void Create(Employee entity);
+
 }

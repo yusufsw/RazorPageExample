@@ -10,11 +10,10 @@ public class SQLEmployeeRepository : IEmployeeRepository
         _context = context;
     }
 
-    public Employee Create(Employee entity)
+    public void Create(Employee entity)
     {
         _context.Employees.Add(entity);
         _context.SaveChanges();
-        return entity;
     }
 
     public IEnumerable<Employee> GetAll()
