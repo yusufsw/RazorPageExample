@@ -1,10 +1,11 @@
+using RazorPageExample.Models;
 using RazorPageExample.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddRazorPages();
-
-builder.Services.AddSingleton<IEmployeeRepository, MockEmployeeRepository>(); 
+builder.Services.AddTransient<IEmployeeRepository, SQLEmployeeRepository>(); 
+builder.Services.AddDbContext<DataContext>(); //Models/DataContext'te connection string mevcut
 
 var app = builder.Build();
 
